@@ -1,0 +1,37 @@
+@mixin flex{
+    display: flex;
+}
+@mixin center{
+    justify-content: center;
+    align-items: center;
+}
+@mixin left{
+    justify-content: left;
+    align-items: center;
+}
+@mixin right{
+    justify-content: right;
+    align-items: center;
+}
+@mixin row{
+    flex-flow: row wrap;
+}
+@mixin row-nowrap{
+    flex-flow: row nowrap;
+}
+@mixin column{
+    flex-flow: column wrap;
+}
+@mixin column-nowrap{
+    flex-flow: column nowrap;
+}
+@mixin desktop{
+    @media screen and (min-width: 992px){
+        @content;
+    }
+}
+@mixin tablet{
+    @media all and (min-width: 765px) and (max-width:991px){
+        @content;
+    }
+}
