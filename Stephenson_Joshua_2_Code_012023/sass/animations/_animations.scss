@@ -1,0 +1,41 @@
+
+@mixin transition-point-6{
+    transition: all .6s ease-in-out;
+}
+
+@keyframes fade-in{
+    0%{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes spinner{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fade-out{
+    0%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 0;
+    }
+    90%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}

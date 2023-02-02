@@ -1,0 +1,115 @@
+    //Imports
+    @import './config/variables';
+    @import './config/mixins';
+    @import './config/functions';
+    @import './config/extensions';
+    
+    @import './layouts/container';
+    @import './layouts/responsive';
+    
+    @import './animations/animations';
+    
+    @import "./components/buttons";
+    
+    @import "./pages/home";
+    @import "./pages/menu";
+    
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&family=Shrikhand&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+
+    header{
+        & .nav{
+            position: relative;
+            &__logo{
+                font-family: $titles-logos-font-family;
+                box-shadow: rgba(0, 0, 0, 0.356) 0px 3px 10px;
+                @include flex;
+                @include center;
+                font-size: 30px;
+                margin-top: 0px;
+                padding-top: 1%;
+                padding-bottom: 1%;
+                margin-bottom: 5px;
+                height: 50px;
+                width: 100%
+            }
+            &__button{
+                position: absolute;
+                top: 21px;
+                left: 25px;
+                @include flex;
+                @include left;
+                border: 0;
+                width: 5%;
+                background-color: white;
+                transform: translateX(0);
+                @include transition-point-6;
+                background: transparent;
+                & a{
+                    @include transition-point-6;
+                    border: 0;
+                    background: transparent;
+                    color: black;
+                    font-size: larger;
+                    background-clip: text;
+                    }
+                }
+            
+            &__button:hover{
+                & a{
+                scale: 1.2;
+                transform:translateX(10%);
+                background: transparent;
+                background-clip: text;
+                }
+            }
+        }
+    }
+    body{
+        padding: 0;
+        margin: 0 auto;
+        font-weight: map-get($font-weights, regular);
+        color: black;
+        font-family: $text-font-family;
+        
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    a{
+        text-decoration: none;
+    }
+    li{
+        text-decoration: none;
+        list-style-type: none;
+    }
+    footer{
+        background-color: rgb(54, 54, 54);
+        height: 240px;
+        margin-top: -10px;
+        & .nav{
+            &__logo{
+                z-index: 2;
+                font-family: $titles-logos-font-family;
+                @include flex;
+                @include left;
+                font-size: 15px;
+                margin-top: 10px;
+                color: white;
+            }
+            &__list{
+                margin-left: -40px;
+                margin-top: -10px;
+                color: white;
+                text-decoration: none;
+                font-size: 13px;
+
+                & a{
+                    color: white;
+                    line-height: 2;
+                }
+            }
+            
+        }
+    }
