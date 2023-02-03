@@ -6,8 +6,6 @@
             }
         }
     }
-    
-    
     .menu{
         width: 100%;
         flex-direction: row;
@@ -37,6 +35,12 @@
             margin: 0;
             &__card{
                 width: 85% !important;
+                &:hover  &__button{
+                    transform: translateX(0);
+                    & i{
+                        transform: rotate(-360deg);
+                    }
+                }
                 &:hover &__price{
                     transform: translateX(-210%) !important;
                 }
@@ -59,7 +63,6 @@
             @include row;
         }
     }
-
     .left{
         @include flex;
         @include left;
@@ -166,8 +169,15 @@
                     padding-left: 25%;
                     font-size: medium;
                     }
+                &:hover  &__button{
+                    transform: translateX(0);
+                    & i{
+                        transform: rotate(-360deg);
+                    }
+                }
                 &:hover &__price{
                     transform: translateX(-50%) !important;
+                    
                 }
                 &__button{
                     margin-right: -31% !important;

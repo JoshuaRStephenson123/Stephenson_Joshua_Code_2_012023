@@ -96,11 +96,7 @@
         background-color: $primary-color;
         filter: brightness(155%) opacity(80%) drop-shadow(5px 5px 5px $primary-color);
         color: black;
-        scale: 1.1;
-            &__icon{
-                color: $primary-color;
-            }
-        
+        transform: scale(1.1);
         }    
 }
 .restaurant{
@@ -121,8 +117,8 @@
     border-radius: 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     @include transition-point-6;
-    &:hover{
-        scale: 1.1;
+    &:hover, &:active{
+        transform:scale(1.1);
     }
     &__image{
         @include row;
@@ -179,9 +175,9 @@
             background-clip: text;
             
         }
-        &:hover &__heart-full{
+        &:hover, &:focus, &:active &__heart-full{
             opacity: 1;
-            background-image: linear-gradient(to top $secondary-color, $primary-color);
+            color:$primary-color;
             background-clip: text;
         }
         }
