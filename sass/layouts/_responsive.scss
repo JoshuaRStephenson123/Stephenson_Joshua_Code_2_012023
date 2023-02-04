@@ -35,25 +35,21 @@
             margin: 0;
             &__card{
                 width: 85% !important;
-                &:hover  &__button{
-                    transform: translateX(0);
-                    & i{
-                        transform: rotate(-360deg);
-                    }
-                }
+
                 &:hover &__price{
                     transform: translateX(-210%) !important;
+
                 }
                 &__price{
                     margin-right: -5% !important;
                 }
                 &__button{
                     margin-right: -7% !important;
-                    width: 15% !important;
                     padding-bottom: 9% !important;
                     padding-left: 0%;
+                    width: 25% !important;
                     & i{
-                        margin-left: 22% !important;
+                        margin-left: 28% !important;
                     }
                 }
             }
@@ -96,7 +92,7 @@
         width: 40%;
     }
     .how-it-works{
-        @include right;
+        @include center;
         width: 50%;
         margin-right: 5%;
         margin-top: 0%;
@@ -110,7 +106,6 @@
         }
     }
         .card{
-            @include flex;
             width: 23% !important;
             margin-right: 2%;
             height: 230px !important;
@@ -169,22 +164,14 @@
                     padding-left: 25%;
                     font-size: medium;
                     }
-                &:hover  &__button{
-                    transform: translateX(0);
-                    & i{
-                        transform: rotate(-360deg);
-                    }
-                }
                 &:hover &__price{
-                    transform: translateX(-50%) !important;
+                    transform: translateX(-40%) !important;
                     
                 }
                 &__button{
                     margin-right: -31% !important;
                     width: 40% !important;
                     & i{
-                        width: 30% !important;
-                        height: 20px !important;
                         margin-top: 50% !important;
                         margin-left: 35% !important;
                         margin-bottom: 20%;
