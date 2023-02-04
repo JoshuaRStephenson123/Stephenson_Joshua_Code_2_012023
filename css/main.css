@@ -8,7 +8,6 @@
 .row {
   display: flex;
   flex-direction: row;
-  justify-content: center;
 }
 
 .column {
@@ -51,12 +50,6 @@
   .menu__wrapper__card {
     width: 85% !important;
   }
-  .menu__wrapper__card:hover .menu__wrapper__card__button {
-    transform: translateX(0);
-  }
-  .menu__wrapper__card:hover .menu__wrapper__card__button i {
-    transform: rotate(-360deg);
-  }
   .menu__wrapper__card:hover .menu__wrapper__card__price {
     transform: translateX(-210%) !important;
   }
@@ -65,12 +58,12 @@
   }
   .menu__wrapper__card__button {
     margin-right: -7% !important;
-    width: 15% !important;
     padding-bottom: 9% !important;
     padding-left: 0%;
+    width: 25% !important;
   }
   .menu__wrapper__card__button i {
-    margin-left: 22% !important;
+    margin-left: 28% !important;
   }
   .menu .column {
     display: flex;
@@ -112,7 +105,7 @@
     width: 40%;
   }
   .how-it-works {
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     width: 50%;
     margin-right: 5%;
@@ -127,7 +120,6 @@
     padding-bottom: 0% !important;
   }
   .card {
-    display: flex;
     width: 23% !important;
     margin-right: 2%;
     height: 230px !important;
@@ -180,22 +172,14 @@
     padding-left: 25%;
     font-size: medium;
   }
-  .menu__wrapper__card:hover .menu__wrapper__card__button {
-    transform: translateX(0);
-  }
-  .menu__wrapper__card:hover .menu__wrapper__card__button i {
-    transform: rotate(-360deg);
-  }
   .menu__wrapper__card:hover .menu__wrapper__card__price {
-    transform: translateX(-50%) !important;
+    transform: translateX(-40%) !important;
   }
   .menu__wrapper__card__button {
     margin-right: -31% !important;
     width: 40% !important;
   }
   .menu__wrapper__card__button i {
-    width: 30% !important;
-    height: 20px !important;
     margin-top: 50% !important;
     margin-left: 35% !important;
     margin-bottom: 20%;
@@ -315,33 +299,32 @@
   justify-content: center;
   align-items: center;
   background-color: white;
-  width: 30%;
+  width: 25px;
   height: 25px;
   border-radius: 50%;
   font-size: smaller;
   margin-left: 32%;
-  margin-top: 65%;
+  margin-top: 55%;
   transform: rotate(0deg);
+  transition: all 0.6s ease-in-out;
 }
 .menu__wrapper__card:hover .menu__wrapper__card__button {
   transform: translateX(0);
   transition: all 0.6s ease-in-out;
 }
 .menu__wrapper__card:hover .menu__wrapper__card__button i {
-  transform: rotate(-360deg);
+  transform: rotate(360deg);
 }
 .menu__wrapper__card .menu__wrapper__card:hover .menu__wrapper__card__price {
   transform: translateX(-350%);
 }
 .menu__wrapper__card :active .menu__wrapper__card__button {
   transform: translateX(0%);
-  transition: all 0.6s ease-in-out;
 }
 .menu__wrapper__card :active .menu__wrapper__card__button i {
-  transform: rotate(-360deg);
+  transform: rotate(360deg);
 }
 .menu__wrapper__card :active .menu__wrapper__card__price {
-  transition: all 0.6s ease-in-out;
   transform: translateX(-350%);
 }
 
@@ -485,13 +468,14 @@
 }
 .how-it-works__card__icon {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   height: 25px;
   width: 25px;
   margin-top: 22px;
   color: grey;
   font-size: x-large;
+  margin-left: 30px;
 }
 .how-it-works__card__text {
   display: flex;
@@ -520,8 +504,14 @@
   padding-bottom: 5%;
 }
 
+.row {
+  justify-content: space-between;
+}
+
 .card {
   flex-flow: column wrap;
+  justify-content: left;
+  align-items: center;
   background-color: white;
   width: 100%;
   height: 230px;
@@ -553,7 +543,8 @@
   padding: 5px 15px;
 }
 .card__text {
-  margin-top: 6%;
+  margin-top: 7%;
+  margin-left: 7%;
   width: 80%;
   color: black;
 }
@@ -572,6 +563,7 @@
   align-items: center;
   position: relative;
   top: 10px;
+  right: 10px;
   font-size: x-large;
 }
 .card__icon__heart-empty {
@@ -585,7 +577,12 @@
   z-index: 1;
   background-clip: text;
 }
-.card__icon:hover, .card__icon:focus, .card__icon:active .card__icon__heart-full {
+.card__icon:hover .card__icon__heart-full {
+  opacity: 1;
+  color: #9356dc;
+  background-clip: text;
+}
+.card__icon:active .card__icon__heart-full {
   opacity: 1;
   color: #9356dc;
   background-clip: text;
