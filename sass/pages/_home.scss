@@ -19,6 +19,8 @@
     }
 }
 .location{
+    @include flex;
+    justify-content: center !important;
     z-index: -1;
     background-color: #ececec;
     &__icon{
